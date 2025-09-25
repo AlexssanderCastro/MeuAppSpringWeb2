@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container pt-5">
-    <h1>Cadastrar Produto</h1>
+    <h1>Cadastrar Cliente</h1>
     <form action="#" th:action="@{/customer/save}" th:object="${customer}" method="POST">
         <div class="form-group row">
             <label for="name" class="col-sm-2 col-form-label">Nome</label>
@@ -28,20 +28,20 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="phoneNumber">Preço:</label>
+            <label class="col-sm-2 col-form-label" for="phoneNumber">Numero de telefone:</label>
             <div class="col-sm-10">
                 <input type="text" th:field="*{phoneNumber}" class="form-control" id="phoneNumber" name="phoneNumber" step="0.01"
                     placeholder="Digite o número de telefone do cliente" >
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="dateOfBirth">Estoque:</label>
+            <label class="col-sm-2 col-form-label" for="dateOfBirth">Data de nascimento:</label>
             <div class="col-sm-10">
                 <input type="date" th:field="*{dateOfBirth}" class="form-control" id="dateOfBirth" name="dateOfBirth"
                     placeholder="Digite a data de nascimento do cliente">
             </div>
         </div>
-        <button type="submit" class="btn btn-info col-2"> Cadastrar Produto</button>
+        <button type="submit" class="btn btn-info col-2"> Cadastrar Cliente</button>
     </form>
 </div>
 </body>

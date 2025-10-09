@@ -25,13 +25,20 @@
           <td scope="row" th:text="${customer.dateOfBirth}"></td>
           <td scope="row" th:text="${customer.cpf}"></td>
           <td scope="row" th:text="${customer.address}"></td>
-          <td class="display-flex-column">
-            <a th:href="@{/customer/edit/{id}(id=${customer.id})}" class="btn btn-primary me-2">Editar</a>
-            <a th:href="@{/customer/delete/{id}(id=${customer.id})}" class="btn btn-danger">Deletar</a>
+          <td>
+            <div class="d-flex">
+              <a th:href="@{/customer/edit/{id}(id=${customer.id})}" class="btn btn-primary me-2">Editar</a>
+              <a th:href="@{/customer/delete/{id}(id=${customer.id})}" class="btn btn-danger">Deletar</a>
+            </div>
           </td>
         </tr>
       </tbody>
     </table>
+    <div class="row">
+        <a th:href="@{/customer/create}">
+          <button sec:authorize="hasAuthority('Admin')" class="btn btn-primary">Cadastrar Cliente</button>
+        </a>
+      </div>
   </div>
   <div th:replace="~{/../fragments/footer :: footer}"></div>
 </body>
